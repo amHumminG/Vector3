@@ -3,7 +3,7 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-// Unit tests
+// Now we run all the unit tests without having implemented any of the logic yet
 
 namespace TestData {
     const Vector3 vecEmpty{0.0f, 0.0f, 0.0f};
@@ -40,7 +40,7 @@ TEST(Vec3Unit, ConstructorCopy){
 
 TEST(Vec3Unit, Equal) {
     EXPECT_EQ(TestData::vecACopy == TestData::vecA, true);
-    EXPECT_EQ(TestData::VecA == TestData::vecB, false);
+    EXPECT_EQ(TestData::vecA == TestData::vecB, false);
 }
 
 TEST(Vec3Unit, Add) {
