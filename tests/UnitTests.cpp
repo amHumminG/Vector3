@@ -3,7 +3,7 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-// Now we run all the unit tests without having implemented any of the logic yet
+
 
 namespace TestData {
     const Vector3 vecEmpty{0.0f, 0.0f, 0.0f};
