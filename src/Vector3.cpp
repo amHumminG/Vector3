@@ -26,7 +26,7 @@ Vector3 Vector3::operator*(float scalar) const {
 }
 
 float Vector3::Magnitude() const {
-    -1.0f;
+    return -1.0f;
 }
 
 Vector3 Vector3::Normalize() const {
