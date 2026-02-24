@@ -14,7 +14,7 @@ void TestProjRefl() {
     float scale = nominator / denominator;
     
     Vector3 projection = vecA * scale;
-    Vector3 reflection = (2 * projection) - vecB;
+    Vector3 reflection = (projection * 2) - vecB;
 
     // Verify projection
     EXPECT_NEAR(projection.x, 1.48484848f, PRECISION);
