@@ -3,9 +3,8 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-// We have now implemented dummy definitions for all of the
-// vector functionality.
-// Unit tests have been written and all of the should fail
+// Vector defintions are now written properly
+// All unit tests should now pass
 
 namespace TestData {
     const Vector3 vecEmpty{0.0f, 0.0f, 0.0f};
@@ -66,11 +65,16 @@ TEST(Vec3Unit, Magnitude) {
 }
 
 TEST(Vec3Unit, Normalize) {
-    Vector3 normalizedVec = TestData::vecEmpty.Normalize();
+    Vector3 normalizedVec = TestData::vecA.Normalize();
     float sqrt14 = sqrt(14);
     EXPECT_NEAR(normalizedVec.x, 1/sqrt14, PRECISION);
     EXPECT_NEAR(normalizedVec.y, 2/sqrt14, PRECISION);
     EXPECT_NEAR(normalizedVec.z, 3/sqrt14, PRECISION);
+
+    normalizedVec = TestData::vecEmpty.Normalize();
+    EXPECT_NEAR(normalizedVec.x, 0.0f, PRECISION);
+    EXPECT_NEAR(normalizedVec.y, 0.0f, PRECISION);
+    EXPECT_NEAR(normalizedVec.z, 0.0f, PRECISION);
 }
 
 TEST(Vec3Unit, DotProduct) {
@@ -80,6 +84,6 @@ TEST(Vec3Unit, DotProduct) {
 TEST(Vec3Unit, CrossProduct) {
     Vector3 crossProduct = TestData::vecA.CrossMultiply(TestData::vecB);
     EXPECT_NEAR(crossProduct.x, -4.0f, PRECISION);
-    EXPECT_NEAR(crossProduct.y, -8.0f, PRECISION);
+    EXPECT_NEAR(crossProduct.y, 8.0f, PRECISION);
     EXPECT_NEAR(crossProduct.z, -4.0f, PRECISION);
 }
