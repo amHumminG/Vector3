@@ -1,5 +1,4 @@
 #pragma once
-#include <stdexcept>
 
 class Vector3 {
 public:
@@ -17,4 +16,5 @@ public:
     float Magnitude() const;
     float Dot(const Vector3& other) const;
     Vector3 CrossMultiply(const Vector3& other) const;
+    float Angle(const Vector3& other) const;
 };
