@@ -2,7 +2,8 @@
 #include <cmath>
 #define EPSILON 1e-5f
 
-// All the vector functionality has now been defined!
+// All vector functionality is now defined!
+// Test should be passing now
 
 Vector3::Vector3()
     : x(0.0f), y(0.0f), z(0.0f) {}

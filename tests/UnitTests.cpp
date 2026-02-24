@@ -3,9 +3,6 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-// Vector defintions are now written properly
-// All unit tests should now pass
-
 namespace TestData {
     const Vector3 vecEmpty{0.0f, 0.0f, 0.0f};
     const Vector3 vecA{1.0f, 2.0f, 3.0f};
