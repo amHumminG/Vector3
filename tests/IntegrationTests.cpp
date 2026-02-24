@@ -3,7 +3,7 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-void TestProjRefl() {
+TEST(Vec3Integration, ProjRefl) {
     // Setup
     Vector3 vecA(-7.0f, 4.0f, 1.0f);
     Vector3 vecB(3.0f, 2.0f, -1.0f);
