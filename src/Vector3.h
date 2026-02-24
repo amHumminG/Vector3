@@ -1,5 +1,4 @@
 #pragma once
-#include <stdexcept>
 
 class Vector3 {
 public:
