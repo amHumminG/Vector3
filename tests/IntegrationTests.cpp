@@ -82,15 +82,15 @@ TEST(Vec3Integration, RaySphereIntersection) {
     ray.direction = Vector3(1.0f, 0.0f, 0.0f).Normalize();
 
     Sphere sphereA;
-    sphereA.origin = (5.0f, 0.0f, 0.0f);
+    sphereA.centerPoint = (5.0f, 0.0f, 0.0f);
     sphereA.radius = 1.0f;
 
     Sphere sphereB;
-    sphereB.origin = (5.0f, 2.0f, 0.0f);
+    sphereB.centerPoint = (5.0f, 2.0f, 0.0f);
     sphereB.radius = 2.0f;
 
     Sphere sphereC;
-    sphereC.origin = (5.0f, 10.0f, 0.0f);
+    sphereC.centerPoint = (5.0f, 10.0f, 0.0f);
     sphereC.radius = 1.0f;
 
     float t = 0.0f;
