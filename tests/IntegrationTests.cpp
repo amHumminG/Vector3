@@ -99,3 +99,15 @@ TEST(Vec3Integration, RaySphereIntersection) {
     EXPECT_EQ(sphereC.Intersection(ray, t), false); // Miss
 }
 
+TEST(Vec3Integration, TriangleNormal) {
+    Vector3 A(0,0,0);
+    Vector3 B(2,0,0);
+    Vector3 C(0,2,0);
+
+    Vector3 edge1(B - A);
+    Vector3 edge2(C - A);
+
+    Vector3 normal = edge1.CrossMultiply(edge2).Normalize();
+
+    EXPECT_EQ(normal == Vector3(0.0f, 0.0f, 1.0f), true);
+}
