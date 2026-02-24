@@ -18,7 +18,7 @@ set(TEST_FILES
     tests/IntegrationTests.cpp
 )
 
-add_library(Vector3Lib STATIC ${CALCULATOR_FILES})
+add_library(Vector3Lib STATIC ${VECTOR3_FILES})
 target_include_directories(Vector3Lib PUBLIC src)
 add_executable(run_tests ${TEST_FILES})
 
