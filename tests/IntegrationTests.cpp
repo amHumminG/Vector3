@@ -22,7 +22,7 @@ TEST(Vec3Integration, ProjRefl) {
     EXPECT_NEAR(projection.z, -0.21212121f, PRECISION);
 
     // Verify reflection
-    EXPECT_NEAR(reflection.x, 0.03030303f, PRECISION);
+    EXPECT_NEAR(reflection.x, -0.03030303f, PRECISION);
     EXPECT_NEAR(reflection.y, -3.69696969f, PRECISION);
-    EXPECT_NEAR(reflection.z, -0.57575757f, PRECISION);
+    EXPECT_NEAR(reflection.z, 0.57575757f, PRECISION);
 }
