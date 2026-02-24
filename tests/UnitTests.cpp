@@ -3,11 +3,14 @@
 #include <cmath>
 #define PRECISION 1e-5f
 
-
+// We have now implemented dummy definitions for all of the
+// vector functionality.
+// Unit tests have been written and all of the should fail
 
 namespace TestData {
     const Vector3 vecEmpty{0.0f, 0.0f, 0.0f};
     const Vector3 vecA{1.0f, 2.0f, 3.0f};
+    const Vector3 vecANegative{-1.0f, -2.0f, -3.0f};
     const Vector3 vecACopy{1.0f, 2.0f, 3.0f};
     const Vector3 vecB{3.0f, 2.0f, 1.0f};
 }
@@ -59,6 +62,7 @@ TEST(Vec3Unit, Multiply) {
 TEST(Vec3Unit, Magnitude) {
     EXPECT_NEAR(TestData::vecEmpty.Magnitude(), 0.0f, PRECISION);
     EXPECT_NEAR(TestData::vecA.Magnitude(), sqrt(14), PRECISION);
+    EXPECT_NEAR(TestData::vecANegative.Magnitude(), sqrt(14), PRECISION);
 }
 
 TEST(Vec3Unit, Normalize) {
